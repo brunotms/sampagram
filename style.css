@@ -1,17 +1,174 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
 }
 
-a{
+a {
     color: #3c96ed;
     text-decoration: none;
 }
 
-body{
+body {
     background: #FAFAFA;
     height: 100%;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+#wrapper {
+    height: 100vh;
+}
+
+#container {
+    margin: 0 auto;
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    flex-grow: 1;
+    /* Serve para tentar encaixar os dois "column" lado a lado */
+    width: 50%;
+}
+
+.left {
+    background-image: url("./assets/main-foto.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 454px;
+    /* Definindo a largura desejada */
+    height: 618px;
+    /* Definindo a altura desejada */
+    margin-bottom: 50px;
+}
+
+.right {
+    padding-left: 20px;
+}
+
+@font-face {
+    font-family: 'Christmas Bell';
+    src: url('./fonts/Christmas\ Bell\ -\ Personal\ Use.otf') format('opentype');
+}
+
+.logo {
+    font-family: 'Christmas Bell', sans-serif;
+    font-size: 41px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    position: relative;
+    letter-spacing: 2px
+}
+
+.login-panel {
+    background-color: #FFF;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="password"],
+[type="text"] {
+    background-color: #FFF;
+    border: 1px solid rgb(236, 234, 234);
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    width: 320px;
+    color: #000000;
+}
+
+input[type="password"]::placeholder,
+input[type="text"]::placeholder {
+    color: rgb(165, 164, 164);
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    outline: 0;
+    border: 1px solid #a1a1a1;
+}
+
+input[type="submit"] {
+    width: 320px;
+    margin-top: 10px;
+    height: 30px;
+    border: 0;
+    background-color: #3c96ed;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.infobox {
+    background-color: #FFF;
+    height: 60px;
+    border: 1px solid rgb(236, 234, 234);
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infobox p {
+    user-select: none;
+}
+
+.infobox p a {
+    font-weight: bold;
+}
+
+.get-app-panel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.app-buttons {
+    margin-top: 16px;
+}
+
+.app-buttons img {
+    height: 40px;
+    padding: 0 2px;
+}
+
+footer {
+    text-align: center;
+    height: 50px;
+    margin-top: -50px
+}
+
+footer a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.text-small{
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+    text-transform: uppercase;
+    padding-left: 20px;
+    display: inline-block;
 }
